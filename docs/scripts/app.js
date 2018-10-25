@@ -19,6 +19,7 @@ maxN.textContent=max;
 inputSubmit.addEventListener('click',(e)=>{
 
   if(inputSubmit.value==='Play Again'){
+    inputGuess.style.borderColor='grey';
     inputGuess.disabled=false;
     inputGuess.value='';
     inputSubmit.value='Submit';
@@ -55,7 +56,7 @@ function checkNumber(randN,inputN){
       attemptLeft=attempt-1;
       inputGuess.value='';
       if(attemptLeft==0){
-        showMessage(`NO more attempt left`,'red');
+        showMessage(`NO more attempt left Number was ${randN}`,'red');
         inputGuess.value='';
         inputGuess.disabled=true;
         inputSubmit.value='Play Again';
